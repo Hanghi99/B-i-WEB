@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table >
+        <tr>
+            <th>Amount</th>
+            <th>From currenci</th>
+            <th>To currenci</th>
+
+
+        </tr>
+        <tr>
+            <td><input type="text" id="money"></td>
+            <td><select id="input">
+                    <option value="VND"> Việt Nam</option>
+                    <option value="USD">USD</option>
+            <td>
+                <select id="output">
+                    <option value="VND">Việt Nam</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td rowspan="2"><button type="button" onclick="money()">Chuyen</button></td>
+
+
+        </tr>
+        <tr>
+            <td>
+                <font color="blue">Result: <span id="result"></span></font>
+            </td>
+
+        </tr>
+        <script> function money() {
+                let money = document.getElementById("money").value;
+                let input = document.getElementById("input").value;
+                let output = document.getElementById("output").value;
+                let result = "";
+                if (input == "VND" && output == "USD") {
+                    result = money / 23000;
+                }
+                else if (input == "USD" && output == "VND") 
+                { result = money * 23000; 
+                
+                }
+                
+                else if (input=="VND" && output=="VND" || input=="USD" && output=="USD"){result= money}
+                
+            document.getElementById("result").innerHTML = result;
+            }
+            
+        </script>
+    </table>
+
+</body>
+
+</html>
