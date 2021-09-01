@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+	    <img id="myImage" src="b.png" width="100"  />
+	    <p>Click button below to move the image to right</p>
+	    <input type="button" value="Sang phải" onclick="move_phai()" />
+	 
+	</form>
+
+	<script >
+	
+		window.onload = init();
+
+		function init() {
+		    imgObj = document.getElementById('myImage');
+		    imgObj.style.position = 'relative';
+		    imgObj.style.left = '0px';
+		}
+
+		function move_phai(){
+			let myImage = document.getElementById('myImage');
+	
+			
+			let left = parseInt( myImage.style.left ); 
+			left = left + 10; 
+
+			
+			myImage.style.left = left + 'px'; 
+
+		}
+
+		
+	</script>
+
+    </script>
+</body>
+</html>

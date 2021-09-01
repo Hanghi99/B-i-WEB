@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nutbam {
+            height: 40px;
+            width: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="maytinh">
+        <table>
+            <tr>
+                <td colspan="4"> <input type="text" style="width:96%" id="1" name="manhinh"> </td>
+            </tr>
+            <tr>
+                <td><input type="button" class="nutbam" name="7" value="7" onclick="maytinh.manhinh.value+=7"></td>
+                <td><input type="button" class="nutbam" name="8" value="8" onclick="maytinh.manhinh.value+=8"></td>
+                <td><input type="button" class="nutbam" name="9" value="9" onclick="maytinh.manhinh.value+=9"></td>
+                <td><input type="button" class="nutbam" name="chia" value="/" onclick="maytinh.manhinh.value+='/'"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="nutbam" name="4" value="4" onclick="maytinh.manhinh.value+=4"></td>
+                <td><input type="button" class="nutbam" name="5" value="5" onclick="maytinh.manhinh.value+=5"></td>
+                <td><input type="button" class="nutbam" name="6" value="6" onclick="maytinh.manhinh.value+=6"></td>
+                <td><input type="button" class="nutbam" name="nhan" value="*" onclick="maytinh.manhinh.value+='*'"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="nutbam" name="1" value="1" onclick="maytinh.manhinh.value+=1"></td>
+                <td><input type="button" class="nutbam" name="2" value="2" onclick="maytinh.manhinh.value+=2"></td>
+                <td><input type="button" class="nutbam" name="3" value="3" onclick="maytinh.manhinh.value+=3"></td>
+                <td><input type="button" class="nutbam" name="tru" value="-" onclick="maytinh.manhinh.value+='-'"></td>
+            </tr>
+            <tr>
+                <td><input type="reset" class="nutbam" name="AC" value="AC" onclick="maytinh.manhinh.value=''"></td>
+                <td><input type="button" class="nutbam" name="0" value="0" onclick="maytinh.manhinh.value+=0"></td>
+                <td><input type="button" class="nutbam" name="ketqua" value="="
+                        onclick="maytinh.manhinh.value=eval(maytinh.manhinh.value)"></td>
+                <td><input type="button" class="nutbam" name="cong" value="+" onclick="maytinh.manhinh.value+='+'"></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>
