@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Nhập một số:</h2>
+    <input type="text" id="number" />
+    <input type="button" onclick="kt_snt()" value="check">
+    <br>
+    <textarea id="result" cols="30" ></textarea>
+    <script>
+        function kt_snt() {
+            let input_number = parseInt(document.getElementById("number").value);
+            let check = true;
+            if (input_number < 2) {
+                check = false;
+
+            }
+            else {
+                if (input_number == 2) {
+                    check = true;
+
+                }
+                else {
+                    for (i = 2; i < input_number; i++) {
+                        if (input_number % i == 0) {
+                            check = false;
+                            break;
+
+                        }
+                    }
+                }
+            }
+            if (check == true)
+             {
+                document.getElementById('result').innerHTML = `${input_number} là số nguyên tố `
+
+            }
+            else
+             {
+                document.getElementById('result').innerHTML = `${input_number} không là số nguyên tố `
+            }
+        }
+    </script>
+</body>
+
+</html>

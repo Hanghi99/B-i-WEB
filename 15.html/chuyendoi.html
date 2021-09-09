@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Chuyển đổi Feet và Meters</h2>
+    <h3>Nhập giá trị :</h3>
+  <input type="text" id="number" >  <br>
+  <input type="button" onclick="Feet_sang_meters()" value="Feet -> Meters"> 
+  <input type="button" onclick="Meters_sang_feet()" value="Meters-> Feet">
+  <br>
+  <textarea  id="result" cols="30" rows="10"></textarea>
+  <script>
+    function Feet_sang_meters() {
+        let n= Number(document.getElementById("number").value);
+
+        let Meters = Number(0.305*n);
+        document.getElementById("result").innerHTML = `Feet -> Meters : ${Meters}`
+    }
+    function Meters_sang_feet() {
+        let n = Number(document.getElementById("number").value);
+        let Feet = Number(3.279*n);
+        document.getElementById("result").innerHTML = `Meters -> Feet : ${Feet}`
+        
+    }
+  </script>
+
+</body>
+</html>

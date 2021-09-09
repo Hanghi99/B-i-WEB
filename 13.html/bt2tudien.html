@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+        <input type="text" id="text" />
+       
+        <input type="button" value="dịch" onclick="nhap()" />
+        <textarea id="kq" ></textarea>
+    
+    <script>
+        let English = ["hello", "goodbye", "baby", "name", "blue"];
+        let Vietnamese = ["xin chào", "tạm biệt", "em bé", "tên", "màu xanh"];
+        function nhap() {
+
+
+            let input_Text = document.getElementById("text").value;
+          
+            let key = English.indexOf(input_Text);
+
+            if (key < 0) {
+                document.getElementById('kq').innerHTML = 'Không tìm thấy';
+            } else {
+               let find = Vietnamese[key];
+               document.getElementById('kq').innerHTML = find;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
